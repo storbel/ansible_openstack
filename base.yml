@@ -1,0 +1,9 @@
+--- 
+# This playbook used to demo OpenStack Juno user, role and project features.  
+ 
+- hosts: vps
+  remote_user: root 
+  become: false 
+  roles: 
+    - role : create-users-env
+
