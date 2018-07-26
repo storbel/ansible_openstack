@@ -1,17 +1,20 @@
 ---
 # tasks file for create-users-env
-- name: Download pip
-  get_url: url=https://bootstrap.pypa.io/get-pip.py dest=/tmp
-- name: install pip
-  command: {item}
-  register: result
-  with_items:
-   - "python /tmp/get-pip.py"
-   - "pip install --upgrade --force-reinstall pip==9.0.1"
-   - "pip install shade"
+#- name: Download pip
+#  get_url: url=https://bootstrap.pypa.io/get-pip.py dest=/tmp
 
-- name: print pip install output
-  debug: var=result.stdout
+#- name: install pip
+#  command: {item}
+#  register: result
+#  with_items:
+#   - "python /tmp/get-pip.py"
+#   - "pip install --upgrade --force-reinstall pip==9.0.1"
+#   - "pip install shade"
+
+
+#- name: print pip install output
+#  debug: var=result.stdout
+
 
 - name: Install random password generator package 
   package: name={{item}} state=present 
